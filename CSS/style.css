@@ -1,0 +1,314 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "banner banner banner banner"
+    "sites sites sites sites"
+    "mainside mainside mainside mainside"
+    "aboutus aboutus aboutus aboutus"
+    ". booking booking ."
+    "rooms rooms rooms rooms"
+    "footer footer footer footer";
+}
+
+.banner {
+    grid-area: banner;
+    background-image: url(../Img/logo/bonz.ai-logo-color-portrait-full.png) ;
+    height: 27rem;
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.sites {
+    grid-area: sites;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aqua;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sites__active {
+    color: black;
+    text-decoration-line: none;
+    cursor: pointer;
+}
+
+.sites__inactive {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mainside {
+    grid-area: mainside;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(../Img/photos/08-night.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 30rem;
+}
+
+.mainside__button {
+    border: 1px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.aboutus {
+    grid-area: aboutus;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+    text-align: justify;
+}
+
+.about__one {
+    background-image: url(../Img/photos/06-day.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 16rem;
+    margin: 0;
+}
+
+.about__two {
+    background-image: url(../Img/photos/04-day.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 16rem;
+    margin: 0;
+}
+
+.about__three {
+    background-image: url(../Img/photos/05-day.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 16rem;
+    margin: 0;
+}
+
+.about__four {
+    background-image: url(../Img/photos/09-day.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 16rem;
+    margin: 0;
+}
+
+.booking {
+    grid-area: booking;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    font-weight: bold;
+}
+
+.booking__checkin {
+    margin-bottom: 10%;
+    padding: 2%;
+}
+
+.booking__checkout {
+    margin-bottom: 10%;
+    padding: 2%;
+}
+
+.booking__number {
+    padding: 2%;
+}
+
+.booking__button {
+    size: 20px;
+    margin-top: 10%;
+    border: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rooms {
+    grid-area: rooms;
+    margin: 3rem;
+    text-align: justify;
+}
+
+.room {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.room__price {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.room__button {
+    border: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.room__one {
+    background-image: url(../Img/photos/05-night.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 14rem;
+    margin: 0;
+}
+
+.room__two {
+    background-image: url(../Img/photos/09-night.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 14rem;
+    margin: 0;
+}
+
+.room__three {
+    background-image: url(../Img/photos/06-night.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 14rem;
+    margin: 0;
+}
+
+.room__four {
+    background-image: url(../Img/photos/03-night.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 14rem;
+    margin: 0;
+}
+
+.footer {
+    grid-area: footer;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    flex-direction: row;
+    background-image: url(../Img/logo/bonz.ai-logo-color-symbol.png);
+    background-position: center ;
+    background-size: 10%;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 769px) {
+    .wrapper {
+        grid-template-columns: repeat(6, 2fr);
+        grid-template-areas: 
+        "banner banner banner banner banner banner"
+        "sites sites sites sites sites sites"
+        "mainside mainside mainside mainside mainside mainside"
+        ". aboutus aboutus aboutus aboutus. "
+        ". . booking booking . ."
+        ". rooms rooms rooms rooms  ."
+        "footer footer footer footer footer footer";
+        
+        letter-spacing: 1.5px;
+    }
+
+    .banner {
+        height: 55rem;
+    }
+
+    .sites {
+        height: 4rem;
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+
+    .mainside {
+        font-size: 2rem;
+        height: 50rem;
+    }
+
+    .mainside__button {
+        font-size: 2rem;
+    }
+
+    .about__one {
+        height: 26rem;
+    }
+
+    .about__two {
+        height: 26rem;
+    }
+
+    .about__three {
+        height: 26rem;
+    }
+
+    .about__four {
+        height: 26rem;
+    }
+
+    .booking {
+        font-size: 1.5rem;
+    }
+
+    .booking__button {
+        font-size: 1.5rem;
+    }
+
+    .room__button {
+        font-size: 1rem;
+    }
+    
+    .room__one {
+        height: 24rem;
+    }
+
+    .room__two {
+        height: 24rem;
+    }
+
+    .room__three {
+        height: 24rem;
+    }
+
+    .room__four {
+        height: 24rem;
+    }
+
+    .footer {
+        height: 10rem;
+    }
+}
